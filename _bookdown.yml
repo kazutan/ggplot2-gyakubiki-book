@@ -1,0 +1,6 @@
+book_filename: "ggplot2-gyakubiki-book"
+chapter_name: "Q: "
+rmd_files:
+  - index.Rmd
+  - 01-Plotting_two_variables.Rmd
+  - 02-Showing_data_values_on_stacked_bar.Rmd

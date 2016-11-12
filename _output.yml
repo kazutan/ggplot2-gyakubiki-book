@@ -1,0 +1,20 @@
+bookdown::epub_book: default
+bookdown::gitbook:
+  css: style.css
+  split_by: "rmd"
+  config:
+    toc:
+      before: |
+        <li><a href="./">A Minimal Book Example</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit:
+      link: https://github.com/rstudio/bookdown-demo/edit/master/%s
+  pandoc_args: [
+        "--from", "markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures"
+        ]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: lualatex
+  keep_tex: yes
