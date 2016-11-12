@@ -42,6 +42,10 @@ bookdown::render_book("index.Rmd", output_format = "bookdown::pdf_book")
 
 RStudioを利用しているなら,BuildパネルでBuilde Bookから選択してください。
 
+### 生成物の場所
+
+生成物は,`_book`ディレクトリに置かれるように設定してます。`.epub`と`.pdf`は単独ファイルで,それ以外はgitbook形式のファイルとなります。
+
 ## session info
 
 ```
