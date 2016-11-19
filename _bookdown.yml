@@ -4,3 +4,13 @@ rmd_files:
   - index.Rmd
   - 01-Plotting_two_variables.Rmd
   - 02-Showing_data_values_on_stacked_bar.Rmd
+  - 03-ggplot2_font.Rmd
+  - 04-adding_space_between_bars_in_ggplot2.Rmd
+  - 05-bandgraph_ggplot2.Rmd
+  - 06-flipped_cartesian_coordinates.Rmd
+  - 07-ggplot2_element_function.Rmd
+  - 08-set_only_lower_bound.Rmd
+  - 09-sort_legend_in_ggplot2.Rmd
+  - 10-sort_x-axis.Rmd
+  - 11-spline_ggplot2.Rmd
+  - 12-transparent_bg_using_ggplot2.Rmd

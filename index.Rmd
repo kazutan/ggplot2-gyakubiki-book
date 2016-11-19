@@ -12,7 +12,27 @@ github-repo: kazutan/ggplot2-gyakubiki-book
 description: "これはggplot2逆引き集です。"
 ---
 
-これはQiitaで公開されている**ggplot2逆引き**の記事を集めたものです。
+これはQiitaで公開されている**ggplot2逆引き**の記事を集めたものです。今のところ，`@kazutan`が作成した12本をまとめています。
 
-またこれは`bookdown`パッケージのテストを兼ねています。うまく動くといいなぁ…。
+なにかありましたら，以下のGithubリポジトリのissueもしくはTwitterの`@kazutan`までおねがいします。
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+
+getOutputFormat <- function() {
+  output <- rmarkdown:::parse_yaml_front_matter(
+    readLines(knitr::current_input())
+    )$output
+  if (is.list(output)){
+    return(names(output)[1])
+  } else {
+    return(output[1])
+  }
+}
+
+if(getOutputFormat() == 'pdf_document') {
+  library(Cairo)
+  knitr::opts_chunk$set(dev="cairo_pdf")
+}
+```
 

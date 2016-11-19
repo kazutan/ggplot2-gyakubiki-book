@@ -26,7 +26,7 @@
 <meta name="author" content="@kazutan">
 
 
-<meta name="date" content="2016-11-12">
+<meta name="date" content="2016-11-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,7 @@
   
   
 <link rel="prev" href="01-Plotting_two_variables.html">
-
+<link rel="next" href="03-ggplot2_font.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -101,7 +101,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./index.html">ggplot2逆引き集</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="01-Plotting_two_variables.html"><a href="01-Plotting_two_variables.html"><i class="fa fa-check"></i><b>1</b> ggplot2で同一グラフに2変数の折れ線グラフを描きたい</a><ul>
@@ -115,8 +115,83 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="02-Showing_data_values_on_stacked_bar.html"><a href="02-Showing_data_values_on_stacked_bar.html#補足"><i class="fa fa-check"></i><b>2.3</b> 補足</a></li>
 <li class="chapter" data-level="2.4" data-path="02-Showing_data_values_on_stacked_bar.html"><a href="02-Showing_data_values_on_stacked_bar.html#参考-1"><i class="fa fa-check"></i><b>2.4</b> 参考</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="03-ggplot2_font.html"><a href="03-ggplot2_font.html"><i class="fa fa-check"></i><b>3</b> ggplot2で日本語フォントを指定したい</a><ul>
+<li class="chapter" data-level="3.1" data-path="03-ggplot2_font.html"><a href="03-ggplot2_font.html#q-2"><i class="fa fa-check"></i><b>3.1</b> Q</a></li>
+<li class="chapter" data-level="3.2" data-path="03-ggplot2_font.html"><a href="03-ggplot2_font.html#a-2"><i class="fa fa-check"></i><b>3.2</b> A</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="03-ggplot2_font.html"><a href="03-ggplot2_font.html#テーマとして日本語のフォントを指定する"><i class="fa fa-check"></i><b>3.2.1</b> テーマとして日本語のフォントを指定する</a></li>
+<li class="chapter" data-level="3.2.2" data-path="03-ggplot2_font.html"><a href="03-ggplot2_font.html#個別にフォント指定"><i class="fa fa-check"></i><b>3.2.2</b> 個別にフォント指定</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="03-ggplot2_font.html"><a href="03-ggplot2_font.html#参考資料"><i class="fa fa-check"></i><b>3.3</b> 参考資料</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html"><i class="fa fa-check"></i><b>4</b> ggplot2でbarの間にスペースを追加する</a><ul>
+<li class="chapter" data-level="4.1" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html#q-3"><i class="fa fa-check"></i><b>4.1</b> Q</a></li>
+<li class="chapter" data-level="4.2" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html#a-3"><i class="fa fa-check"></i><b>4.2</b> A</a></li>
+<li class="chapter" data-level="4.3" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html#補足-1"><i class="fa fa-check"></i><b>4.3</b> 補足</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html#設定例の一覧"><i class="fa fa-check"></i><b>4.3.1</b> 設定例の一覧</a></li>
+<li class="chapter" data-level="4.3.2" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html#errorbarについて"><i class="fa fa-check"></i><b>4.3.2</b> errorbarについて</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="04-adding_space_between_bars_in_ggplot2.html"><a href="04-adding_space_between_bars_in_ggplot2.html#参考-2"><i class="fa fa-check"></i><b>4.4</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html"><i class="fa fa-check"></i><b>5</b> ggplot2で帯グラフを作る</a><ul>
+<li class="chapter" data-level="5.1" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#q-4"><i class="fa fa-check"></i><b>5.1</b> Q</a></li>
+<li class="chapter" data-level="5.2" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#a-4"><i class="fa fa-check"></i><b>5.2</b> A</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#y軸をフルに設定"><i class="fa fa-check"></i><b>5.2.1</b> y軸をフルに設定</a></li>
+<li class="chapter" data-level="5.2.2" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#y軸をパーセンタイル標記に設定"><i class="fa fa-check"></i><b>5.2.2</b> y軸をパーセンタイル標記に設定</a></li>
+<li class="chapter" data-level="5.2.3" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#x軸とy軸を入れ替えて横棒グラフに設定"><i class="fa fa-check"></i><b>5.2.3</b> x軸とy軸を入れ替えて横棒グラフに設定</a></li>
+<li class="chapter" data-level="5.2.4" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#項目順の調整"><i class="fa fa-check"></i><b>5.2.4</b> 項目順の調整</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="05-bandgraph_ggplot2.html"><a href="05-bandgraph_ggplot2.html#参考-3"><i class="fa fa-check"></i><b>5.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06-flipped_cartesian_coordinates.html"><a href="06-flipped_cartesian_coordinates.html"><i class="fa fa-check"></i><b>6</b> ggplot2で縦軸と横軸をひっくり返したい</a><ul>
+<li class="chapter" data-level="6.1" data-path="06-flipped_cartesian_coordinates.html"><a href="06-flipped_cartesian_coordinates.html#q-5"><i class="fa fa-check"></i><b>6.1</b> Q</a></li>
+<li class="chapter" data-level="6.2" data-path="06-flipped_cartesian_coordinates.html"><a href="06-flipped_cartesian_coordinates.html#a-5"><i class="fa fa-check"></i><b>6.2</b> A</a></li>
+<li class="chapter" data-level="6.3" data-path="06-flipped_cartesian_coordinates.html"><a href="06-flipped_cartesian_coordinates.html#応用"><i class="fa fa-check"></i><b>6.3</b> 応用</a></li>
+<li class="chapter" data-level="6.4" data-path="06-flipped_cartesian_coordinates.html"><a href="06-flipped_cartesian_coordinates.html#参考-4"><i class="fa fa-check"></i><b>6.4</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html"><i class="fa fa-check"></i><b>7</b> 複数のggplot2要素を関数の戻り値で渡したい</a><ul>
+<li class="chapter" data-level="7.1" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#q-6"><i class="fa fa-check"></i><b>7.1</b> Q</a></li>
+<li class="chapter" data-level="7.2" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#a-6"><i class="fa fa-check"></i><b>7.2</b> A</a></li>
+<li class="chapter" data-level="7.3" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#応用-1"><i class="fa fa-check"></i><b>7.3</b> 応用</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#要素のリストを使いまわす"><i class="fa fa-check"></i><b>7.3.1</b> 要素のリストを使いまわす</a></li>
+<li class="chapter" data-level="7.3.2" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#繰り返しを関数にしてlapplyでリストで受け取る"><i class="fa fa-check"></i><b>7.3.2</b> 繰り返しを関数にして、lapplyでリストで受け取る</a></li>
+<li class="chapter" data-level="7.3.3" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#mapplyで複数の引数がある関数を繰り返す"><i class="fa fa-check"></i><b>7.3.3</b> mapplyで複数の引数がある関数を繰り返す</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="07-ggplot2_element_function.html"><a href="07-ggplot2_element_function.html#参考資料-1"><i class="fa fa-check"></i><b>7.4</b> 参考資料</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08-set_only_lower_bound.html"><a href="08-set_only_lower_bound.html"><i class="fa fa-check"></i><b>8</b> ggplotで数値軸の下限値(or上限値)だけを指定したい</a><ul>
+<li class="chapter" data-level="8.1" data-path="08-set_only_lower_bound.html"><a href="08-set_only_lower_bound.html#q-7"><i class="fa fa-check"></i><b>8.1</b> Q</a></li>
+<li class="chapter" data-level="8.2" data-path="08-set_only_lower_bound.html"><a href="08-set_only_lower_bound.html#a-7"><i class="fa fa-check"></i><b>8.2</b> A</a></li>
+<li class="chapter" data-level="8.3" data-path="08-set_only_lower_bound.html"><a href="08-set_only_lower_bound.html#参考-5"><i class="fa fa-check"></i><b>8.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html"><i class="fa fa-check"></i><b>9</b> ggplot2で凡例を並び替えたい</a><ul>
+<li class="chapter" data-level="9.1" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#q1"><i class="fa fa-check"></i><b>9.1</b> Q1</a></li>
+<li class="chapter" data-level="9.2" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#a1"><i class="fa fa-check"></i><b>9.2</b> A1</a></li>
+<li class="chapter" data-level="9.3" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#q2"><i class="fa fa-check"></i><b>9.3</b> Q2</a></li>
+<li class="chapter" data-level="9.4" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#a2"><i class="fa fa-check"></i><b>9.4</b> A2</a></li>
+<li class="chapter" data-level="9.5" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#q3-コメント指摘より201582に追記"><i class="fa fa-check"></i><b>9.5</b> Q3 (コメント指摘より2015/8/2に追記)</a></li>
+<li class="chapter" data-level="9.6" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#a3"><i class="fa fa-check"></i><b>9.6</b> A3</a></li>
+<li class="chapter" data-level="9.7" data-path="09-sort_legend_in_ggplot2.html"><a href="09-sort_legend_in_ggplot2.html#参考-6"><i class="fa fa-check"></i><b>9.7</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-sort_x-axis.html"><a href="10-sort_x-axis.html"><i class="fa fa-check"></i><b>10</b> x軸を並べ替えたい</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-sort_x-axis.html"><a href="10-sort_x-axis.html#q-8"><i class="fa fa-check"></i><b>10.1</b> Q</a></li>
+<li class="chapter" data-level="10.2" data-path="10-sort_x-axis.html"><a href="10-sort_x-axis.html#a-8"><i class="fa fa-check"></i><b>10.2</b> A</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="10-sort_x-axis.html"><a href="10-sort_x-axis.html#連続的である場合"><i class="fa fa-check"></i><b>10.2.1</b> 連続的である場合</a></li>
+<li class="chapter" data-level="10.2.2" data-path="10-sort_x-axis.html"><a href="10-sort_x-axis.html#離散的である場合"><i class="fa fa-check"></i><b>10.2.2</b> 離散的である場合</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="10-sort_x-axis.html"><a href="10-sort_x-axis.html#参考-7"><i class="fa fa-check"></i><b>10.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-spline_ggplot2.html"><a href="11-spline_ggplot2.html"><i class="fa fa-check"></i><b>11</b> ggplot2でspline()関数を使って曲線を描きたい</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-spline_ggplot2.html"><a href="11-spline_ggplot2.html#q-9"><i class="fa fa-check"></i><b>11.1</b> Q</a></li>
+<li class="chapter" data-level="11.2" data-path="11-spline_ggplot2.html"><a href="11-spline_ggplot2.html#a-9"><i class="fa fa-check"></i><b>11.2</b> A</a></li>
+<li class="chapter" data-level="11.3" data-path="11-spline_ggplot2.html"><a href="11-spline_ggplot2.html#参照"><i class="fa fa-check"></i><b>11.3</b> 参照</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-transparent_bg_using_ggplot2.html"><a href="12-transparent_bg_using_ggplot2.html"><i class="fa fa-check"></i><b>12</b> ggplot2で透明な背景にする方法</a><ul>
+<li class="chapter" data-level="12.1" data-path="12-transparent_bg_using_ggplot2.html"><a href="12-transparent_bg_using_ggplot2.html#q-10"><i class="fa fa-check"></i><b>12.1</b> Q</a></li>
+<li class="chapter" data-level="12.2" data-path="12-transparent_bg_using_ggplot2.html"><a href="12-transparent_bg_using_ggplot2.html#a-10"><i class="fa fa-check"></i><b>12.2</b> A</a></li>
+<li class="chapter" data-level="12.3" data-path="12-transparent_bg_using_ggplot2.html"><a href="12-transparent_bg_using_ggplot2.html#参照-1"><i class="fa fa-check"></i><b>12.3</b> 参照</a></li>
+</ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/kazutan/ggplot2-gyakubiki-book" target="blank">GitHubリポジトリ</a></li>
 
 </ul>
 
@@ -219,8 +294,8 @@ p</code></pre></div>
           </div>
         </div>
       </div>
-<a href="01-Plotting_two_variables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="01-Plotting_two_variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="03-ggplot2_font.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -247,7 +322,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-Showing_data_values_on_stacked_bar.Rmd",
+"link": "https://github.com/kazutan/ggplot2-gyakubiki-book/edit/master/02-Showing_data_values_on_stacked_bar.Rmd",
 "text": "Edit"
 },
 "download": ["ggplot2-gyakubiki-book.epub"],
