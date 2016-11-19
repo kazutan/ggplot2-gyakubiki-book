@@ -1,0 +1,71 @@
+# ggplot2で透明な背景にする方法
+
+## Q
+`ggplot2`で作成したグラフィックを、背景が透明なPNGに出力する必要があります。基本Rグラフィックならうまくいくのですが、`ggplot2`だと透明になりません:
+```{r, eval=FALSE}
+d <- rnorm(100) #ランダムデータ生成
+
+# これなら透明背景のPNGができます
+png('tr_tst1.png',width=300,height=300,units="px",bg = "transparent")
+boxplot(d)
+dev.off()
+
+# ggplot2でオブジェクト作成
+df <- data.frame(y=d,x=1)
+p <- ggplot(df) + stat_boxplot(aes(x=x,y=y)) 
+p <- p + theme(
+    panel.background = element_rect(fill = "transparent",color = NA),
+    panel.grid.minor = element_line(color = NA), 
+    panel.grid.major = element_line(color = NA)
+)
+# でもこれだと背景が白くなります
+png('tr_tst2.png',width=300,height=300,units="px",bg = "transparent")
+p
+dev.off()
+```
+
+※ 評価させていません
+
+`ggplot2`で透明背景を出力させる方法はあるのでしょうか。
+
+## A
+上記の`theme()`設定では、`plot.background`を透明指定していません。まずは以下のように`ggplot2`のオブジェクトを作成します:
+
+```{r}
+d <- rnorm(100)
+df <- data.frame(y=d,x=1)
+p <- ggplot(df) + stat_boxplot(aes(x = x,y=y)) 
+p <- p + theme(
+    panel.background = element_rect(fill = "transparent",color = NA),
+    panel.grid.minor = element_line(color = NA), 
+    panel.grid.major = element_line(color = NA),
+    plot.background = element_rect(fill = "transparent",color = NA)  #ここを追加
+)
+p
+```
+
+これで、背景要素が透明になります。これをPNG形式に出力するには`ggsave`が便利です:
+
+```{r,eval=FALSE}
+ggsave("tr_tst3.png", p, bg = "transparent")
+```
+
+※ 評価させていません
+
+`?ggsave`には`bg`という引数はありませんが、その他の引数はこの場合graphics deviceにそのまま送られるため、透明処理が働きます。逆にこの引数を設定しないと透明にならず白色になります。
+
+また、knitrなどで出力する場合には、チャンクオプションとして`dev.args=list(bg='transparent)`の記述が必要です:
+```
+{r hogehoge, dev.args = list(bg = 'transparent')}
+```
+
+この際も、出力する`ggplot2`のオブジェクトには、背景要素を全て透明に設定しておいてください。
+
+
+## 参照
+この記事は、StackOverflowに投稿された以下の記事を参考に、現在の`ggplot2`のバージョンにあうようにコードを編集し、一部内容を変更して作成しました:
+- [How to make graphics with transparent background in R using ggplot2? - Stack Overflow](http://stackoverflow.com/questions/7455046/how-to-make-graphics-with-transparent-background-in-r-using-ggplot2)
+
+関連記事・ドキュメント:
+- [How to use a &quot;R-generated&quot; plot as a semi-transparent background in an HTML5 slide made by knitr? - Stack Overflow](http://stackoverflow.com/questions/13813471/how-to-use-a-r-generated-plot-as-a-semi-transparent-background-in-an-html5-sli/13826154#13826154)
+- [theme. ggplot2 0.9.3.1](http://docs.ggplot2.org/current/theme.html)

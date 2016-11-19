@@ -1,0 +1,29 @@
+# ggplot2でspline()関数を使って曲線を描きたい
+
+## Q
+私の持っているデータで、`spline(y~x)`というようにspline関数を使って曲線を描きたいのですが、`lm(y~ns(x), df=_)`といったスムージングを使う方法しか見つけられません。
+
+どうしても`spline()`を使いたいのですが、ggplotで`spline()`を使うシンプルな方法はありますか。以下のような方法を考えたのですが、できればこういうテクニックに頼りたくありません:
+
+```{r, eval=FALSE}
+geom_smooth(aes(x=(spline(y~x)$x, y=spline(y~x)$y))
+```
+
+
+## A
+以下の方法を試してみてください:
+
+```{r}
+library(ggplot2)
+n <- 10
+d <- data.frame(x = 1:n, y = rnorm(n))
+ggplot(d,aes(x,y)) + geom_point() + 
+  geom_line(data=data.frame(spline(d, n=n*10)))
+```
+
+まず実際のデータを`geom_point()`でプロットしておき、スプライン曲線は`geom_line()`で引きます。このとき、この曲線で使用するデータとして、`spline()`で処理したデータフレームを指定すればOKです。
+
+## 参照
+この記事は、以下のStack Overflowに投稿された内容を翻訳して大幅に改編したものです:
+
+- [r - How can I use spline() with ggplot? - Stack Overflow](http://stackoverflow.com/questions/4504498/how-can-i-use-spline-with-ggplot/4505341#4505341)
