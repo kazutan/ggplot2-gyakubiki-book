@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ggplot2逆引き集</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="これはggplot2逆引き集です。">
+  <meta name="generator" content="bookdown 0.2.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="ggplot2逆引き集" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="これはggplot2逆引き集です。" />
+  <meta name="github-repo" content="kazutan/ggplot2-gyakubiki-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ggplot2逆引き集" />
+  
+  <meta name="twitter:description" content="これはggplot2逆引き集です。" />
+  
+
+<meta name="author" content="@kazutan">
+
+
+<meta name="date" content="2016-11-20">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="Showing_data_values_on_stacked_bar.html">
+<link rel="next" href="adding_space_between_bars_in_ggplot2.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">ggplot2逆引き集</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="Plotting_two_variables.html"><a href="Plotting_two_variables.html"><i class="fa fa-check"></i><b>1</b> ggplot2で同一グラフに2変数の折れ線グラフを描きたい</a><ul>
+<li class="chapter" data-level="1.1" data-path="Plotting_two_variables.html"><a href="Plotting_two_variables.html#q"><i class="fa fa-check"></i><b>1.1</b> Q</a></li>
+<li class="chapter" data-level="1.2" data-path="Plotting_two_variables.html"><a href="Plotting_two_variables.html#a"><i class="fa fa-check"></i><b>1.2</b> A</a></li>
+<li class="chapter" data-level="1.3" data-path="Plotting_two_variables.html"><a href="Plotting_two_variables.html#参考"><i class="fa fa-check"></i><b>1.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Showing_data_values_on_stacked_bar.html"><a href="Showing_data_values_on_stacked_bar.html"><i class="fa fa-check"></i><b>2</b> ggplot2で積み重ね棒グラフに値を表示させたい</a><ul>
+<li class="chapter" data-level="2.1" data-path="Showing_data_values_on_stacked_bar.html"><a href="Showing_data_values_on_stacked_bar.html#q-1"><i class="fa fa-check"></i><b>2.1</b> Q</a></li>
+<li class="chapter" data-level="2.2" data-path="Showing_data_values_on_stacked_bar.html"><a href="Showing_data_values_on_stacked_bar.html#a-1"><i class="fa fa-check"></i><b>2.2</b> A</a></li>
+<li class="chapter" data-level="2.3" data-path="Showing_data_values_on_stacked_bar.html"><a href="Showing_data_values_on_stacked_bar.html#補足"><i class="fa fa-check"></i><b>2.3</b> 補足</a></li>
+<li class="chapter" data-level="2.4" data-path="Showing_data_values_on_stacked_bar.html"><a href="Showing_data_values_on_stacked_bar.html#参考-1"><i class="fa fa-check"></i><b>2.4</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ggplot2_font.html"><a href="ggplot2_font.html"><i class="fa fa-check"></i><b>3</b> ggplot2で日本語フォントを指定したい</a><ul>
+<li class="chapter" data-level="3.1" data-path="ggplot2_font.html"><a href="ggplot2_font.html#q-2"><i class="fa fa-check"></i><b>3.1</b> Q</a></li>
+<li class="chapter" data-level="3.2" data-path="ggplot2_font.html"><a href="ggplot2_font.html#a-2"><i class="fa fa-check"></i><b>3.2</b> A</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="ggplot2_font.html"><a href="ggplot2_font.html#テーマとして日本語のフォントを指定する"><i class="fa fa-check"></i><b>3.2.1</b> テーマとして日本語のフォントを指定する</a></li>
+<li class="chapter" data-level="3.2.2" data-path="ggplot2_font.html"><a href="ggplot2_font.html#個別にフォント指定"><i class="fa fa-check"></i><b>3.2.2</b> 個別にフォント指定</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="ggplot2_font.html"><a href="ggplot2_font.html#参考資料"><i class="fa fa-check"></i><b>3.3</b> 参考資料</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html"><i class="fa fa-check"></i><b>4</b> ggplot2でbarの間にスペースを追加する</a><ul>
+<li class="chapter" data-level="4.1" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html#q-3"><i class="fa fa-check"></i><b>4.1</b> Q</a></li>
+<li class="chapter" data-level="4.2" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html#a-3"><i class="fa fa-check"></i><b>4.2</b> A</a></li>
+<li class="chapter" data-level="4.3" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html#補足-1"><i class="fa fa-check"></i><b>4.3</b> 補足</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html#設定例の一覧"><i class="fa fa-check"></i><b>4.3.1</b> 設定例の一覧</a></li>
+<li class="chapter" data-level="4.3.2" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html#errorbarについて"><i class="fa fa-check"></i><b>4.3.2</b> errorbarについて</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="adding_space_between_bars_in_ggplot2.html"><a href="adding_space_between_bars_in_ggplot2.html#参考-2"><i class="fa fa-check"></i><b>4.4</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html"><i class="fa fa-check"></i><b>5</b> ggplot2で帯グラフを作る</a><ul>
+<li class="chapter" data-level="5.1" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#q-4"><i class="fa fa-check"></i><b>5.1</b> Q</a></li>
+<li class="chapter" data-level="5.2" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#a-4"><i class="fa fa-check"></i><b>5.2</b> A</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#y軸をフルに設定"><i class="fa fa-check"></i><b>5.2.1</b> y軸をフルに設定</a></li>
+<li class="chapter" data-level="5.2.2" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#y軸をパーセンタイル標記に設定"><i class="fa fa-check"></i><b>5.2.2</b> y軸をパーセンタイル標記に設定</a></li>
+<li class="chapter" data-level="5.2.3" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#x軸とy軸を入れ替えて横棒グラフに設定"><i class="fa fa-check"></i><b>5.2.3</b> x軸とy軸を入れ替えて横棒グラフに設定</a></li>
+<li class="chapter" data-level="5.2.4" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#項目順の調整"><i class="fa fa-check"></i><b>5.2.4</b> 項目順の調整</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="bandgraph_ggplot2.html"><a href="bandgraph_ggplot2.html#参考-3"><i class="fa fa-check"></i><b>5.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="flipped_cartesian_coordinates.html"><a href="flipped_cartesian_coordinates.html"><i class="fa fa-check"></i><b>6</b> ggplot2で縦軸と横軸をひっくり返したい</a><ul>
+<li class="chapter" data-level="6.1" data-path="flipped_cartesian_coordinates.html"><a href="flipped_cartesian_coordinates.html#q-5"><i class="fa fa-check"></i><b>6.1</b> Q</a></li>
+<li class="chapter" data-level="6.2" data-path="flipped_cartesian_coordinates.html"><a href="flipped_cartesian_coordinates.html#a-5"><i class="fa fa-check"></i><b>6.2</b> A</a></li>
+<li class="chapter" data-level="6.3" data-path="flipped_cartesian_coordinates.html"><a href="flipped_cartesian_coordinates.html#応用"><i class="fa fa-check"></i><b>6.3</b> 応用</a></li>
+<li class="chapter" data-level="6.4" data-path="flipped_cartesian_coordinates.html"><a href="flipped_cartesian_coordinates.html#参考-4"><i class="fa fa-check"></i><b>6.4</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html"><i class="fa fa-check"></i><b>7</b> 複数のggplot2要素を関数の戻り値で渡したい</a><ul>
+<li class="chapter" data-level="7.1" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#q-6"><i class="fa fa-check"></i><b>7.1</b> Q</a></li>
+<li class="chapter" data-level="7.2" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#a-6"><i class="fa fa-check"></i><b>7.2</b> A</a></li>
+<li class="chapter" data-level="7.3" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#応用-1"><i class="fa fa-check"></i><b>7.3</b> 応用</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#要素のリストを使いまわす"><i class="fa fa-check"></i><b>7.3.1</b> 要素のリストを使いまわす</a></li>
+<li class="chapter" data-level="7.3.2" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#繰り返しを関数にしてlapplyでリストで受け取る"><i class="fa fa-check"></i><b>7.3.2</b> 繰り返しを関数にして、lapplyでリストで受け取る</a></li>
+<li class="chapter" data-level="7.3.3" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#mapplyで複数の引数がある関数を繰り返す"><i class="fa fa-check"></i><b>7.3.3</b> mapplyで複数の引数がある関数を繰り返す</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="ggplot2_element_function.html"><a href="ggplot2_element_function.html#参考資料-1"><i class="fa fa-check"></i><b>7.4</b> 参考資料</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="set_only_lower_bound.html"><a href="set_only_lower_bound.html"><i class="fa fa-check"></i><b>8</b> ggplotで数値軸の下限値(or上限値)だけを指定したい</a><ul>
+<li class="chapter" data-level="8.1" data-path="set_only_lower_bound.html"><a href="set_only_lower_bound.html#q-7"><i class="fa fa-check"></i><b>8.1</b> Q</a></li>
+<li class="chapter" data-level="8.2" data-path="set_only_lower_bound.html"><a href="set_only_lower_bound.html#a-7"><i class="fa fa-check"></i><b>8.2</b> A</a></li>
+<li class="chapter" data-level="8.3" data-path="set_only_lower_bound.html"><a href="set_only_lower_bound.html#参考-5"><i class="fa fa-check"></i><b>8.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html"><i class="fa fa-check"></i><b>9</b> ggplot2で凡例を並び替えたい</a><ul>
+<li class="chapter" data-level="9.1" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#q1"><i class="fa fa-check"></i><b>9.1</b> Q1</a></li>
+<li class="chapter" data-level="9.2" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#a1"><i class="fa fa-check"></i><b>9.2</b> A1</a></li>
+<li class="chapter" data-level="9.3" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#q2"><i class="fa fa-check"></i><b>9.3</b> Q2</a></li>
+<li class="chapter" data-level="9.4" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#a2"><i class="fa fa-check"></i><b>9.4</b> A2</a></li>
+<li class="chapter" data-level="9.5" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#q3-コメント指摘より201582に追記"><i class="fa fa-check"></i><b>9.5</b> Q3 (コメント指摘より2015/8/2に追記)</a></li>
+<li class="chapter" data-level="9.6" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#a3"><i class="fa fa-check"></i><b>9.6</b> A3</a></li>
+<li class="chapter" data-level="9.7" data-path="sort_legend_in_ggplot2.html"><a href="sort_legend_in_ggplot2.html#参考-6"><i class="fa fa-check"></i><b>9.7</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sort_x-axis.html"><a href="sort_x-axis.html"><i class="fa fa-check"></i><b>10</b> x軸を並べ替えたい</a><ul>
+<li class="chapter" data-level="10.1" data-path="sort_x-axis.html"><a href="sort_x-axis.html#q-8"><i class="fa fa-check"></i><b>10.1</b> Q</a></li>
+<li class="chapter" data-level="10.2" data-path="sort_x-axis.html"><a href="sort_x-axis.html#a-8"><i class="fa fa-check"></i><b>10.2</b> A</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="sort_x-axis.html"><a href="sort_x-axis.html#連続的である場合"><i class="fa fa-check"></i><b>10.2.1</b> 連続的である場合</a></li>
+<li class="chapter" data-level="10.2.2" data-path="sort_x-axis.html"><a href="sort_x-axis.html#離散的である場合"><i class="fa fa-check"></i><b>10.2.2</b> 離散的である場合</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="sort_x-axis.html"><a href="sort_x-axis.html#参考-7"><i class="fa fa-check"></i><b>10.3</b> 参考</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="spline_ggplot2.html"><a href="spline_ggplot2.html"><i class="fa fa-check"></i><b>11</b> ggplot2でspline()関数を使って曲線を描きたい</a><ul>
+<li class="chapter" data-level="11.1" data-path="spline_ggplot2.html"><a href="spline_ggplot2.html#q-9"><i class="fa fa-check"></i><b>11.1</b> Q</a></li>
+<li class="chapter" data-level="11.2" data-path="spline_ggplot2.html"><a href="spline_ggplot2.html#a-9"><i class="fa fa-check"></i><b>11.2</b> A</a></li>
+<li class="chapter" data-level="11.3" data-path="spline_ggplot2.html"><a href="spline_ggplot2.html#参照"><i class="fa fa-check"></i><b>11.3</b> 参照</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="transparent_bg_using_ggplot2.html"><a href="transparent_bg_using_ggplot2.html"><i class="fa fa-check"></i><b>12</b> ggplot2で透明な背景にする方法</a><ul>
+<li class="chapter" data-level="12.1" data-path="transparent_bg_using_ggplot2.html"><a href="transparent_bg_using_ggplot2.html#q-10"><i class="fa fa-check"></i><b>12.1</b> Q</a></li>
+<li class="chapter" data-level="12.2" data-path="transparent_bg_using_ggplot2.html"><a href="transparent_bg_using_ggplot2.html#a-10"><i class="fa fa-check"></i><b>12.2</b> A</a></li>
+<li class="chapter" data-level="12.3" data-path="transparent_bg_using_ggplot2.html"><a href="transparent_bg_using_ggplot2.html#参照-1"><i class="fa fa-check"></i><b>12.3</b> 参照</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/kazutan/ggplot2-gyakubiki-book" target="blank">GitHubリポジトリ</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ggplot2逆引き集</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ggplot2で日本語フォントを指定したい" class="section level1">
+<h1><span class="header-section-number">Q: 3</span> ggplot2で日本語フォントを指定したい</h1>
+<div id="q-2" class="section level2">
+<h2><span class="header-section-number">3.1</span> Q</h2>
+<p>ggplot2で日本語のフォントを指定したいです。</p>
+</div>
+<div id="a-2" class="section level2">
+<h2><span class="header-section-number">3.2</span> A</h2>
+<p>基本は<code>theme()</code>レイヤーでフォントを設定したい部分を指定しながら設定していきます。ただ、<strong>ggplot2の古いバージョンによってはうまく動かない</strong>可能性があります。ここでは<code>v2.1.0</code>以降を念頭に説明します。</p>
+<p>指定するフォントを先に変数に入れておきます。今回のコードではこのフォント名を差し替えてもらえればいいかと思います:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">font_A &lt;-<span class="st"> &quot;IPAexMincho&quot;</span>
+font_B &lt;-<span class="st"> &quot;IPAexGothic&quot;</span></code></pre></div>
+<p>なお、フォント名については、各実行環境で様々なので省略します。</p>
+<div id="テーマとして日本語のフォントを指定する" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> テーマとして日本語のフォントを指定する</h3>
+<p>そのプロット全体にテーマフォントとしてフォント指定する場合は、`theme(text = element_text(“FontName”))とフォントを指定すればOKです:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+d &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">X=</span><span class="kw">rep</span>(<span class="dv">1</span>:<span class="dv">5</span>, <span class="dv">2</span>), <span class="dt">Y=</span><span class="kw">c</span>(<span class="dv">1</span>:<span class="dv">5</span>, <span class="dv">5</span>:<span class="dv">1</span>), <span class="dt">A=</span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>), <span class="dt">each=</span><span class="dv">5</span>))
+
+<span class="kw">ggplot</span>(<span class="dt">data=</span>d, <span class="kw">aes</span>(<span class="dt">x=</span>X, <span class="dt">y=</span>Y, <span class="dt">group=</span>A, <span class="dt">color=</span>A)) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size=</span><span class="dv">2</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;えっくす&quot;</span>, <span class="dt">y=</span><span class="st">&quot;わい&quot;</span>, <span class="dt">color=</span><span class="st">&quot;えー&quot;</span>, <span class="dt">title=</span><span class="st">&quot;たいとる&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A))</code></pre></div>
+<p><img src="ggplot2-gyakubiki-book_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>この<code>element_text()</code>関数の第一引数は<code>family=</code>なので、いきなりフォント名を当ててもOKです。詳しくは<code>?elemet_text</code>でヘルプを確認してください。</p>
+</div>
+<div id="個別にフォント指定" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> 個別にフォント指定</h3>
+<p>個別に設定する場合は、<code>theme()</code>内の引数にaes属性を指定して<code>element_text()</code>を渡します:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data=</span>d, <span class="kw">aes</span>(<span class="dt">x=</span>X, <span class="dt">y=</span>Y, <span class="dt">group=</span>A, <span class="dt">color=</span>A)) +
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size=</span><span class="dv">2</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;えっくす&quot;</span>, <span class="dt">y=</span><span class="st">&quot;わい&quot;</span>, <span class="dt">color=</span><span class="st">&quot;えー&quot;</span>, <span class="dt">title=</span><span class="st">&quot;たいとる&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A), 
+        <span class="dt">axis.title.x =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_B))</code></pre></div>
+<p><img src="ggplot2-gyakubiki-book_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>上の例では、全体設定でfontA(IPAMincho)を設定し、x軸のタイトルを個別にfontB(IPAGothic)に設定しています。どの属性にどの属性に与えるかは、以下のリンクにある公式ドキュメントを参照してください:</p>
+<p><a href="http://docs.ggplot2.org/current/theme.html" class="uri">http://docs.ggplot2.org/current/theme.html</a></p>
+<p>このリンク先で、<code>element_text</code>が設定できる要素について設定できます。主なものを記述した例です:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data=</span>d, <span class="kw">aes</span>(<span class="dt">x=</span>X, <span class="dt">y=</span>Y, <span class="dt">group=</span>A, <span class="dt">color=</span>A))+
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size=</span><span class="dv">2</span>) +
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;えっくす&quot;</span>, <span class="dt">y=</span><span class="st">&quot;わい&quot;</span>, <span class="dt">color=</span><span class="st">&quot;えー&quot;</span>, <span class="dt">title=</span><span class="st">&quot;たいとる&quot;</span>) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A),  <span class="co">#全体設定</span>
+        <span class="dt">title =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_B),  <span class="co">#プロット、軸、凡例のタイトル全体設定</span>
+        <span class="dt">axis.title =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A),  <span class="co">#軸タイトルの全体設定</span>
+        <span class="dt">axis.title.x =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_B),  <span class="co">#x軸のタイトル設定</span>
+        <span class="dt">axis.text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A),  <span class="co">#軸テキスト(目盛りなど)の全体設定</span>
+        <span class="dt">axis.text.y =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_B),  <span class="co">#y軸テキストの設定</span>
+        <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A),  <span class="co">#凡例テキストの設定</span>
+        <span class="dt">legend.title =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_B),  <span class="co">#凡例タイトルの設定</span>
+        <span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">family =</span> font_A)  <span class="co">#プロットタイトルの設定</span>
+        ) </code></pre></div>
+<p><img src="ggplot2-gyakubiki-book_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+</div>
+<div id="参考資料" class="section level2">
+<h2><span class="header-section-number">3.3</span> 参考資料</h2>
+<ul>
+<li><a href="http://qiita.com/uri/items/615653e83642d7e475de" class="uri">http://qiita.com/uri/items/615653e83642d7e475de</a></li>
+<li><a href="http://docs.ggplot2.org/current/theme.html" class="uri">http://docs.ggplot2.org/current/theme.html</a></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Showing_data_values_on_stacked_bar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adding_space_between_bars_in_ggplot2.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/kazutan/ggplot2-gyakubiki-book/edit/master/Rmds/ggplot2_font.Rmd",
+"text": "Edit"
+},
+"download": ["ggplot2-gyakubiki-book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -3,7 +3,7 @@ bookdown::epub_book:
   toc_depth: 2
   md_extensions: -ascii_identifiers
 bookdown::gitbook:
-  css: style.css
+  css: ["style.css","toc.css"]
   split_by: "rmd"
   config:
     toc:

@@ -4,3 +4,5 @@
 .Ruserdata
 .rds
 .rdx
+_bookdown_files/
+Rmds/*.md

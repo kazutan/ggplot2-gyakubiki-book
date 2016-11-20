@@ -1,6 +1,7 @@
 base
-ggplot2
-tidyr
-plyr
-Cairo
-scales
+methods
+datasets
+utils
+grDevices
+graphics
+stats
